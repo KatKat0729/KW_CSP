@@ -42,4 +42,6 @@ print(subject)
 
 print(subject, age)
 
+print(eye_color, favorite_color)
+
 
