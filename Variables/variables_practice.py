@@ -40,3 +40,6 @@ print(age)
 
 print(subject)
 
+print(subject, age)
+
+
