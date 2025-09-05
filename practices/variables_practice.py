@@ -28,12 +28,19 @@ print(total/4)
 average = total/4
 print("The average age is:", average)
 
-num_1 = 12
-num_2 = 7
-print("Addition(+): ", num_1+num_2)
-print("Subtraction(-): ", num_1-num_2)
-print("Multiplication(*): ", num_1*num_2)
-print("Division(/): ", num_1/num_2)
-print("Exponents(**): ", num_1**num_2)
-print("Integer Division(//): ", num_1//num_2)
-print("Modulo(%): ", num_1%num_2)
+num_1 = int(input("Tell me a number:\n"))
+num_2 = float(input("Tell me another number:\n"))
+num_1 += num_2
+print("Addition(+): ", num_1)
+num_1 -= num_2
+print("Subtraction(-): ", num_1)
+num_1 *= num_2
+print("Multiplication(*): ", num_1)
+num_1 /= num_2
+print("Division(/): ", round(num_1))
+num_1 **= num_2
+print("Exponents(**): ", num_1)
+num_1 //= num_2
+print("Integer Division(//): ", num_1)
+num_1 %= num_2
+print("Modulo(%): ", num_1)
