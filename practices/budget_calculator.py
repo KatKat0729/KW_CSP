@@ -1,4 +1,4 @@
-# KW 8th Budget Calculator
+# KW 7th Budget Calculator
 
 income = float(input("What is your monthly income? "))
 rent = float(input("What is your monthly rent? "))
