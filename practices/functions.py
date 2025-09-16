@@ -4,13 +4,13 @@ def welcome():
     name = input("What is your name?\n")
     print(f"Hello, {name}!")
 
-print("This is not in my function")
-#welcome()
-#welcome()
-#welcome()
-#welcome()
-#welcome()
-#welcome()
+
+welcome()
+welcome()
+welcome()
+welcome()
+welcome()
+welcome()
 
 def add(number, number2):
     number += number2
