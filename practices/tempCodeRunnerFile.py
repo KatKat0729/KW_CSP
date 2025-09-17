@@ -1,2 +1,1 @@
-
-print(error)
+    print(f"You have a {grade}%, that is a C or lower :( )")
