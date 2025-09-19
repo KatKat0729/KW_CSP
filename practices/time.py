@@ -1,10 +1,19 @@
 # KW 7th Time of Day Assignment
 
-time = int(input("What is the hour for you in military time?"))
+import time
+import datetime
 
-if time < 12:
-    print(f"It is {time} for you, good morning! (:")
-elif time >= 12 and time <= 17:
-    print(f"It is {time} for you, good afternoon! (:")
-elif time >= 17:
-    print(f"If it {time} for you, good evening! (:")
+now = datetime.datetime.now()
+hour = now.hour
+minute = now.minute
+
+print(f"The time is {hour}:{minute}")
+
+if hour >= 18 and hour <= 1:
+    print(f"The time is {hour}:{minute}, Good evening!")
+
+elif hour >= 12 and not hour >= 18:
+    print(f"The time is {hour}:{minute}, good afternoon!")
+
+else:
+    print(f"The time is {hour}:{minute}, good morning!")
