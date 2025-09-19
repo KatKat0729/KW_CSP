@@ -14,3 +14,5 @@ hour = now.hour
 
 print(f"The time is {now}.")
 print(f"The hour is {hour}.")
+
+# If you are doing this at home the time is going to be 6 hours ahead :D
