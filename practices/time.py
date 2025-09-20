@@ -9,11 +9,11 @@ minute = now.minute
 
 print(f"The time is {hour}:{minute}")
 
-if hour >= 18 and hour <= 1:
-    print(f"The time is {hour}:{minute}, Good evening!")
+if hour >= 18 or hour <= 1:
+    print(f"The time is {hour}, Good evening!")
 
-elif hour >= 12 and not hour >= 18:
-    print(f"The time is {hour}:{minute}, good afternoon!")
+elif hour >= 12 and hour < 18:
+    print(f"The time is {hour}, good afternoon!")
 
 else:
-    print(f"The time is {hour}:{minute}, good morning!")
+    print(f"The time is {hour}, good morning!")
