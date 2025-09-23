@@ -3,9 +3,9 @@
 foods = ["Chocolate", "Zupa Soup", "Strawberries", "Cookies", "Garlic Bread", "Pound cake", "Cucumber"]
 
 #For Loop
-#for food in foods:
-    #print(f"{food} is my favorite food!")
-    #print("hi!")
+for food in foods:
+    print(f"{food} is my favorite food!")
+    print("hi!")
 
 #for x in range(1,20):
     #print(x)
