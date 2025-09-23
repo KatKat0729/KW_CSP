@@ -23,25 +23,25 @@ foods = ["Chocolate", "Zupa Soup", "Strawberries", "Cookies", "Garlic Bread", "P
     #print(i)
     #i+= 1
 
-x = 1
+#x = 1
 
-while x < 21:
-    if x % 2 == 0:
-        print(f"{x} is an even number.")
-    else:
-        print(f"{x} is an odd number.")
-    x += 1
+#while x < 21:
+    #if x % 2 == 0:
+        #print(f"{x} is an even number.")
+    #else:
+        #print(f"{x} is an odd number.")
+    #x += 1
 
 import random
 
 d = 1
 end = random.randint(1,20)
 
-while d != end:
-    print("Duck")
-    d += 1
+#while d != end:
+    #print("Duck")
+    #d += 1
 
-print("Goose")
+#print("Goose")
 
 while True:
     if d == end:
