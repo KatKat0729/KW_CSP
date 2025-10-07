@@ -13,9 +13,9 @@ int main(void){
     printf("%f\n", 8.0/3);
     printf("%d\n", (int) pow(2,4));
 
-    year+ = 1; // compound assignment operator
+    year += 1; // compound assignment operator
     printf("%d\n", year);
-    year++; // incrimentor
+    year ++; // incrimentor
     printf("%d\n", year);
     return 0;
 
