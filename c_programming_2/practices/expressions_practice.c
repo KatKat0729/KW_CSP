@@ -32,4 +32,5 @@ int main(void){
     int answer9 = pow((22/2-2*5),2)+pow((4-6/6),2);
     printf("Answer 9 is %i\n", answer9);
 
+    return 0;
 }
