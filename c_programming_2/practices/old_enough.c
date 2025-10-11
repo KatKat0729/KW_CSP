@@ -3,25 +3,24 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(void){
+int main(void) {
 
-    int age;
+    int age = 0;
 
     printf("Hello, how old are you?-\n");
     scanf("%d", &age);
 
-    if(age >= 18){
+    if(age >= 18) {
         printf("You are %.0d, you are old enough to vote!\n", age);
-    }else if(age >= 16){
+    } else if(age >= 16) {
         printf("You are %.0d, you are old enough to drive!\n", age);
-    }else if (age >= 15){
+    } else if (age >= 15) {
         printf("You are %.0d, you are old enough to get your learners permit!\n", age);
-    }else if (age >= 4){
+    } else if (age >= 4) {
         printf("You are %.0d, you are old enough to go to school!\n", age);
-    }else{
+    } else {
         printf("You are %.0d, enjoy it while it lasts.\n", age);
     }
 
-    return 0; 
+    return 0;
 }
-

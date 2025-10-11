@@ -1,4 +1,5 @@
 // KW 7th Name Decorator
+
 #include <stdio.h>
 #include <string.h>
 
@@ -11,19 +12,29 @@ int main(void){
     scanf("%s", name);
     
     full_name[0] = '\0'; // empty (but exists)
+
     strcat(full_name, "~^~"); // ~^~
     strcat(full_name, name); // ~^~name
     strcat(full_name, "~^~"); // ~^~name~^~
-
     printf("%s\n", full_name);
 
-    // printf("~^~ %s ~^~\n", name);
+    full_name[0] = '\0';
+    strcat(full_name, "<<<"); 
+    strcat(full_name, name); 
+    strcat(full_name, ">>>"); 
+    printf("%s\n", full_name);
 
-    // printf("<<< %s >>>\n", name);
+    full_name[0] = '\0';
+    strcat(full_name, "---"); 
+    strcat(full_name, name); 
+    strcat(full_name, "---"); 
+    printf("%s\n", full_name);
 
-    // printf("--- %s ---\n", name);
-
-    // printf("_.^._ %s _.^._\n", name);
+    full_name[0] = '\0';
+    strcat(full_name, "_.^._"); 
+    strcat(full_name, name); 
+    strcat(full_name, "_.^._"); 
+    printf("%s\n", full_name);
 
     return 0;
 }
