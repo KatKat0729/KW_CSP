@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 /* Logical operators
- %% and
+ && and
 || or
 ! not
 */
