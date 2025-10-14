@@ -3,19 +3,21 @@
 #include <stdio.h>
 
 int main(void){
-    char x = 1;
+    int x = 1;
 
-    while(char < 51){
-        if(x % 15 == 0);{
-            printf("FizzBuzz");
+    while(x < 51){
+        if(x % 15 == 0){
+            printf("FizzBuzz\n");
         }
-        else if(x % 5 ==0);{
-            printf("Buzz");
-        }else if(x % 3 ==0);{
-            printf("Fizz")
-        }else
-
+        else if(x % 5 ==0){
+            printf("Buzz\n");
+        }else if(x % 3 ==0){
+            printf("Fizz\n");
+        }else{
+            printf("%d\n", x);
+        }     
+        x++;
     }
-    }
+    
     return 0;
 }
