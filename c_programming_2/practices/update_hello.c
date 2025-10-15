@@ -1,9 +1,10 @@
 // KW 7th Updated Hello World
+#include <stdio.h>
+
 void hello(char* name){
-    printf("Hello %s!\n");
+    printf("Hello %s!\n", name);
 }
 
-#include <stdio.h>
 int main(void){
     hello("Vinnny");
     hello("Mars");
