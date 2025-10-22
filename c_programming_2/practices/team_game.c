@@ -3,32 +3,37 @@
 #include <time.h>
 #include <stdlib.h>
 
-char display_word(letter, display)
-    char* display = " _ ";
-    for (letter in word){
-        if (letter in guessed_letters){
-            printf(letter, end="");
-        else{}
-        printf(" ")
+char word[][1000] ={"milky", "zigzag", "foggy", "mummy", "jolly", "poppy", "giggle", "happily", "fluffy", "halfway", "hedgehog", "photography", "chipmunk", "kabaddi", "clockwork", "lazy", "juicy", "chuckled", "foxglove", "vuvuzela", "plump", "chuck", "fully", "puff", "jacuzzi", "middle", "magnify", "black", "pack", "punch", "publicly", "dumbbell", "hobby", "apply", "quack", "bluebell", "crazy", "block", "puppy", "quiz", "pick", "gulf", "lucky", "clock", "cyborg", "prickly", "clump", "skull", "buzzer", "jugs", "skilful", "cyberpunk", "puzzle", "symbol", "chef", "vodka", "windmill", "lollipop", "pumpkin", "building", "pyongyang", "cloud", "wrongly", "blazing", "fury", "clumsy", "pluck", "awful", "church", "yacht", "furlough", "duck", "muddy", "padlock", "femboy", "headache", "coccyx", "flapjack", "unhappy", "lifestyle", "globe", "bauble", "decided", "cycling", "awkward", "gypsy", "symbols", "hyperlink", "pebble", "club", "baby", "volume", "review", "puzzling", "quickly", "pudding", "daffodil", "vivarium", "maximum", "suck"};
+
+
+int display_word(char letter, char display, char guessed_letters){
+    display = "_";
+    for(char letter_in_word){
+        if (char letter in char guessed_letters);{
+            printf("%d", letter);
+        }
+        else{
+            printf("%d", display);
         }
     }
-:
-    def did_guess_all_lettirs();:
-        for letter in wordse
-            if True
-
- not i guessed_letters
-o0129 in t =;;98
-                reloop
-        printf("Congratulations, you won with %d lives left!\n", lives);
-            sys.exit();
+    
+    char did_guess_all_letters
+        for letter in word;
+            if (!letter == guessed_letters);
+                return 1;
+        return 0;
+}
+ // Start of game loop
+    while int lives(>=1){
+         printf("You have %d lives left.", lives);
+    }
         display_word(){
-            str_guess = printf("Guess a letter - \n").strip().lower();
+            char guess = printf("Guess a letter - \n").strip().lower();
         if (len(guess) > 1){
             printf("Stop wasting my time.");
-        }
             sys.exit();
-        guessed_letters.append(guess) //append adds something to a list (We are adding the guess to the list of guessed letters);
+        }
+        srtcat(char guessed_letters, char guess)
         if (guess in word){
             printf("Correct.");
         }
@@ -41,37 +46,55 @@ o0129 in t =;;98
         if did_guess_all_letters();
             printf("Congratulations, you won with %d lives left!\n", lives);
             sys.exit();
-        }}tart of game lop
-    while lives(>=1){
-        if()did_guess_all_letters){
-            printf("Congratulations, you won with %d lives left!\n", lives)
         }
 
-        }
+    if (){i    
+
+    }int main(void){
+        char word_list = {"hello"};
+        int lives = 7;
+        char guessed_letters = [];
+    
+
+        display_word();
+        did_guess_all_letters();
+        srand(time(NULL));
         
-    }
+        for(int i=0; i<5; i++){
+            int num = rand() % 8;
+            printf("Our random person is %s\n", word[num]);
+        }
     
+        
+        
+        printf("You don't have any more guesses, you lose. The word was %s.\n", word);
+        sys.exit()
 
-int main(void){
-    char word_list = {"hello"};
-    srand(time(NULL));
-    char word[][15] = {“Alex”, “Katie”, “Vienna”, “Tia”, “Treyson”, “Xavier”, “Jake”};
-    for(int i=0; i<5; i++){
-    int num = rand() % 8;
-    printf(“Our random person is %s\n”, word[num]);
-int lives = 7;
-    char guessed_letters = [];
+        printf("You don't have any more guesses, you lose. The word was %d", word);
+        sys.exit()
     
-    display_word();
-    did_guess_all_letters();
-    
-printf("You don't have any more guesses, you lose. The word was %d", word);
-sys.exit()
-
-    
-
-
-
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
