@@ -47,6 +47,7 @@ while lives >= 1:
     else:
         lives -= 1
         print(f"Incorrect.")
+        
     if did_guess_all_letters():
         print(f"Congratulations, you won with {lives} lives left!")
         sys.exit()
