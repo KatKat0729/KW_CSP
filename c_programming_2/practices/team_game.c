@@ -5,7 +5,7 @@
 #include <string.h>
 
 //The list of every word that can be used for the game. 
-char word_list[][101] = {"milky", "zigzag", "foggy", "mummy", "jolly", "poppy", "giggle", "happily", "fluffy", "halfway", "hedgehog", "kick", "chipmunk", "kabaddi", "clockwork", "lazy", "juicy", "chuckled", "foxglove", "vuvuzela", "plump", "chuck", "fully", "puff", "jacuzzi", "middle", "magnify", "black", "pack", "punch", "publicly", "dumbbell", "hobby", "apply", "quack", "bluebell", "crazy", "block", "puppy", "quiz", "pick", "gulf", "lucky", "clock", "cyborg", "prickly", "clump", "skull", "buzzer", "jugs", "skilful", "cyberpunk", "puzzle", "symbol", "chef", "vodka", "windmill", "lollipop", "pumpkin", "building", "yolk", "cloud", "wrongly", "blazing", "fury", "clumsy", "pluck", "awful", "church", "yacht", "furlough", "duck", "muddy", "padlock", "flag", "headache", "coccyx", "flapjack", "unhappy", "lifestyle", "globe", "bauble", "decided", "cycling", "awkward", "gypsy", "symbols", "hyperlink", "pebble", "club", "baby", "volume", "review", "puzzling", "quickly", "pudding", "daffodil", "vivarium", "maximum", "suck"};
+char word_list[][101] = {"milky", "zigzag", "foggy", "mummy", "jolly", "poppy", "giggle", "happily", "fluffy", "halfway", "hedgehog", "kick", "chipmunk", "kabaddi", "clockwork", "lazy", "juicy", "chuckled", "foxglove", "vuvuzela", "plump", "chuck", "fully", "puff", "jacuzzi", "middle", "magnify", "black", "pack", "punch", "publicly", "dumbbell", "hobby", "apply", "quack", "bluebell", "crazy", "block", "puppy", "quiz", "pick", "gulf", "lucky", "clock", "cyborg", "prickly", "clump", "skull", "buzzer", "jugs", "skilful", "cyberpunk", "puzzle", "symbol", "chef", "volleyball", "windmill", "lollipop", "pumpkin", "building", "yolk", "cloud", "wrongly", "blazing", "fury", "clumsy", "pluck", "awful", "church", "yacht", "furlough", "duck", "muddy", "padlock", "flag", "headache", "coccyx", "flapjack", "unhappy", "lifestyle", "globe", "bauble", "decided", "cycling", "awkward", "gypsy", "symbols", "hyperlink", "pebble", "club", "baby", "volume", "review", "puzzling", "quickly", "pudding", "daffodil", "vivarium", "maximum", "stick"};
 //This is a list to keep track of all of the letters that the user has guessed.
 char guessed_letters[27] = {0};
 
@@ -81,6 +81,91 @@ int isLetterInWord(char letter, char *word){
     return 0;
 }
 
+void visual_hangman(int lives){
+
+    //+-----+
+    //  |   |
+    //  O   |
+    // /|\  |
+    //  |   |
+    // / \  |
+    //      |
+
+
+    if(lives == 7){
+        printf("+-----+\n");
+        printf("  |   |\n");
+        printf("      |\n");
+        printf("      |\n");
+        printf("      |\n");
+        printf("      |\n");
+        printf("      |\n");
+    }
+    else if(lives == 6){
+        printf("+-----+\n");
+        printf("  |   |\n");
+        printf("  O   |\n");
+        printf("      |\n");
+        printf("      |\n");
+        printf("      |\n");
+        printf("      |\n");
+    }
+    else if(lives == 5){
+        printf("+-----+\n");
+        printf("  |   |\n");
+        printf("  O   |\n");
+        printf("  |   |\n");
+        printf("      |\n");
+        printf("      |\n");
+        printf("      |\n");
+    }
+    else if(lives == 4){
+        printf("+-----+\n");
+        printf("  |   |\n");
+        printf("  O   |\n");
+        printf(" /|   |\n");
+        printf("      |\n");
+        printf("      |\n");
+        printf("      |\n");
+    }
+    else if(lives == 3){
+        printf("+-----+\n");
+        printf("  |   |\n");
+        printf("  O   |\n");
+        printf(" /|\\  |\n");
+        printf("      |\n");
+        printf("      |\n");
+        printf("      |\n");
+    }
+    else if(lives == 2){
+        printf("+-----+\n");
+        printf("  |   |\n");
+        printf("  O   |\n");
+        printf(" /|\\  |\n");
+        printf("  |   |\n");
+        printf("      |\n");
+        printf("      |\n");
+    }
+    else if(lives == 1){
+        printf("+-----+\n");
+        printf("  |   |\n");
+        printf("  O   |\n");
+        printf(" /|\\  |\n");
+        printf("  |   |\n");
+        printf(" /    |\n");
+        printf("      |\n");
+    }
+    else if(lives == 0){
+        printf("+-----+\n");
+        printf("  |   |\n");
+        printf("  O   |\n");
+        printf(" /|\\  |\n");
+        printf("  |   |\n");
+        printf(" / \\  |\n");
+        printf("      |\n");
+    }
+}
+
 //For every letter it checks if that letter is in the guessed_letters list. If it is it will print it, otherwise, it will print " _ ".
 void displayWord(char *word) {
     for (int i = 0; i < strlen(word); i++){
@@ -120,6 +205,7 @@ int main(void){
     {
         //This is displaying the characters in the word (" _ "), and asking the user to guess another letter.
         char letter;
+        visual_hangman(lives);
         displayWord(word);
         printf("You have %i lives left.\n", lives);
         printf("Guess a letter - \n");
@@ -147,12 +233,13 @@ int main(void){
             exit(0);
         }
         
-        // this is what chatgpt says to do because it keeps printing the \n from the scanf and making it so the letter is incorrect :(
+        // This is what chatgpt says to do because it keeps printing the \n from the scanf and making it so the letter is incorrect :(
         // Basically the new line (from the \n) is being printed out, and it can only be a LETTER, and if it's more than just a letter, the game will exit.
         int c;
         while ((c = getchar()) != '\n' && c != EOF) { }
     }
 
     //If the user runs out of lives, they lose, and they will be told what the word was.
-    printf("You don't have any more guesses, you lose. The word was %s\n", word);
+    visual_hangman(lives);
+    printf("You don't have any more guesses, you're dead. The word was %s\n", word);
 }
